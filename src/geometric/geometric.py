@@ -1,3 +1,6 @@
+import math
+
+
 class Geometria:
     """
     Class with geometric exercises.
@@ -40,7 +43,7 @@ class Geometria:
         Returns:
             float: Área del círculo
         """
-        pass
+        return math.pi *radio*radio
     
     def perimetro_circulo(self, radio):
         """
