@@ -226,7 +226,7 @@ class Geometria:
         Returns:
             float: Área de la superficie de la esfera
         """
-        pass
+        return 4*math.pi*radio*radio
     
     def volumen_cilindro(self, radio, altura):
         """
