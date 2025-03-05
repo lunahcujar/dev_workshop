@@ -98,6 +98,11 @@ class Geometria:
         Returns:
             bool: True si los lados pueden formar un triángulo, False en caso contrario
         """
+        if (lado1 +lado2)>lado3 or(lado2 +lado3)>lado1 or (lado1 +lado3)>lado2 :
+            return True
+        else:
+            return False
+    
         pass
     
     def area_trapecio(self, base_mayor, base_menor, altura):
