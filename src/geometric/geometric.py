@@ -190,7 +190,7 @@ class Geometria:
         Returns:
             float: Volumen del cubo
         """
-        pass
+        return lado*lado*lado
     
     def area_superficie_cubo(self, lado):
         """
