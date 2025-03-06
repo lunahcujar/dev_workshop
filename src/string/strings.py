@@ -128,11 +128,11 @@ class Strings:
         Returns:
             bool: True si la cadena representa un número entero, False en caso contrario
         """
-        try:
-            int(texto)
-            return True
-        except ValueError:
+        if not texto:
             return False
+        if texto[0] in ('-', '+'):
+            texto = texto[1:]
+        return texto.isnumeric()
     
     def cifrar_cesar(self, texto, desplazamiento):
         """
