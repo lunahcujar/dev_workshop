@@ -61,7 +61,7 @@ class Strings:
         """
         vocales = "aeiouAEIOU"
         contador = 0
-        for caracter in texto:
+        for caracter in texto.lower():
             if caracter.isalpha() and caracter not in vocales:
                 contador += 1
         return contador
