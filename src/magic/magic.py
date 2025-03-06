@@ -132,7 +132,9 @@ class Magic:
         Returns:
             int: El máximo común divisor de a y b
         """
-        pass
+        while b:
+            a, b = b, a % b
+        return abs(a)
     
     def mcm(self, a, b):
         """
