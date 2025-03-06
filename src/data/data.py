@@ -142,7 +142,26 @@ class Data:
         Returns:
             dict: Diccionario con métodos push, pop, peek y is_empty
         """
-        pass
+        pila = []
+
+        def push(elemento):
+            pila.append(elemento)
+
+        def pop():
+            return pila.pop() if not is_empty() else None
+
+        def peek():
+            return pila[-1] if not is_empty() else None
+
+        def is_empty():
+            return len(pila) == 0
+
+        return {
+            "push": push,
+            "pop": pop,
+            "peek": peek,
+            "is_empty": is_empty
+        }
     
     def implementar_cola(self):
         """
@@ -151,7 +170,28 @@ class Data:
         Returns:
             dict: Diccionario con métodos enqueue, dequeue, peek y is_empty
         """
-        pass
+        cola = []
+
+        def enqueue(elemento):
+            cola.append(elemento)
+
+        def dequeue():
+            return cola.pop(0) if not is_empty() else None
+
+        def peek():
+            return cola[0] if not is_empty() else None
+
+        def is_empty():
+            return len(cola) == 0
+
+        return {
+            "enqueue": enqueue,
+            "dequeue": dequeue,
+            "peek": peek,
+            "is_empty": is_empty
+        }
+
+    
     
     def matriz_transpuesta(self, matriz):
         """
