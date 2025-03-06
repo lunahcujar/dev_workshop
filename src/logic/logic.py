@@ -14,7 +14,7 @@ class Logica:
         Returns:
             bool: Resultado de a AND b
         """
-        return a or b
+        return a and b
     
     def OR(self, a, b):
         """
@@ -27,7 +27,7 @@ class Logica:
         Returns:
             bool: Resultado de a OR b
         """
-        pass
+        return a or b
     
     def NOT(self, a):
         """
