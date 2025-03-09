@@ -47,11 +47,15 @@ class Data:
         Returns:
             list: Lista sin elementos duplicados
         """
-        lista_sin_duplicados = []
+        resultado = []
+        vistos = {}  # Usamos un diccionario para mantener el orden y evitar duplicados
+    
         for elemento in lista:
-            if elemento not in lista_sin_duplicados:
-                lista_sin_duplicados.append(elemento)
-        return lista_sin_duplicados
+            if elemento not in vistos:
+                resultado.append(elemento)
+                vistos[elemento] = True  # Marcamos el elemento como visto
+    
+        return resultado
     
     def merge_ordenado(self, lista1, lista2):
         """
