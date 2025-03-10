@@ -136,7 +136,7 @@ class Data:
         for elemento in conjunto1:  
          if elemento not in conjunto2:  
             return False
-         return True
+        return True
     
     def implementar_pila(self):
         """
