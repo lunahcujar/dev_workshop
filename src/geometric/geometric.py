@@ -330,8 +330,11 @@ class Geometria:
         Returns:
             float: Área del polígono regular
         """
+        if num_lados < 3 or lado <= 0 or apotema <= 0:
+            raise ValueError("El polígono debe tener al menos 3 lados y valores positivos para lado y apotema.")
+        
         perimetro = num_lados * lado
-        return (perimetro*apotema)/2
+        return (perimetro * apotema) / 2
     
     def perimetro_poligono_regular(self, num_lados, lado):
         """

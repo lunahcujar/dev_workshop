@@ -200,6 +200,13 @@ class TestGeometria:
         assert self.geometria.area_poligono_regular(4, 5, 2.5) == 50
         # Test con pentágono
         assert round(self.geometria.area_poligono_regular(5, 6, 4.1), 2) == 61.5
+        # Test con valores inválidos (debe lanzar error)
+        with pytest.raises(ValueError):
+            self.geometria.area_poligono_regular(2, 5, 3)  # Menos de 3 lados
+        with pytest.raises(ValueError):
+            self.geometria.area_poligono_regular(4, -5, 3)  # Lado negativo
+        with pytest.raises(ValueError):
+            self.geometria.area_poligono_regular(4, 5, -3)  # Apotema negativa
     
     def test_perimetro_poligono_regular(self):
         # Test con triángulo regular
