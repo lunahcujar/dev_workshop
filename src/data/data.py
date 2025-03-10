@@ -48,12 +48,12 @@ class Data:
             list: Lista sin elementos duplicados
         """
         resultado = []
-        vistos = set()  # Usamos un conjunto para verificar duplicados rápidamente
+        vistos = set()
 
         for elemento in lista:
             if elemento not in vistos:
                 resultado.append(elemento)
-                vistos.add(elemento)  # Agregamos el elemento al conjunto
+                vistos.add(elemento)
 
         return resultado
     

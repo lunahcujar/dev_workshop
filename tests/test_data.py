@@ -33,7 +33,7 @@ class TestData:
         # Test con lista vacía
         assert self.data.eliminar_duplicados([]) == []
         # Test con valores de diferentes tipos
-        assert self.data.eliminar_duplicados(["a", 1,"a","b", 2.5, 2.5]) == [1, "a", "b",2.5]
+        assert self.data.eliminar_duplicados(["a", 1, "a", "b", 2.5, 2.5]) == ["a", 1, "b", 2.5]
     
     def test_merge_ordenado(self):
         # Test con listas de enteros ordenadas
