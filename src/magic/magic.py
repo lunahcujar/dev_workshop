@@ -1,3 +1,4 @@
+from math import comb
 class Magic:
     """
     Clase con métodos para juegos matemáticos, secuencias especiales y algoritmos numéricos.
