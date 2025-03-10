@@ -330,12 +330,6 @@ class Geometria:
         Returns:
             float: Área del polígono regular
         """
-        if not isinstance(num_lados, int) or not isinstance(lado, (int, float)) or not isinstance(apotema, (int, float)):
-            raise TypeError("Los parámetros deben ser números (num_lados como int, lado y apotema como float o int).")
-
-        if num_lados < 3 or lado <= 0 or apotema <= 0:
-            raise ValueError("El polígono debe tener al menos 3 lados y los valores de lado y apotema deben ser positivos.")
-
         perimetro = num_lados * lado
         return (perimetro * apotema) / 2
     
