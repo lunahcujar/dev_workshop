@@ -312,9 +312,12 @@ class Geometria:
         Returns:
             tuple: Coeficientes (A, B, C) de la ecuación de la recta
         """
+        if x1==x2:
+            return (1,0,-x1)
         A = y2 - y1
         B = x1 - x2
-        C = (x2 * y1) - (x1 * y2)
+        C = -(A*x1 + B*y1)
+
         
         return A, B, C
     
